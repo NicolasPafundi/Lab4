@@ -1,7 +1,7 @@
 <?php
 namespace Models;
     class Cellphone{
-        private $Id;
+        private $CellphoneId;
         private $Code;
         private $Brand;
         private $Model;
@@ -11,15 +11,15 @@ namespace Models;
 
 
 
-        public function getId()
+        public function getCellphoneId()
         {
-                return $this->Id;
+                return $this->CellphoneId;
         }
 
 
-        public function setId($Id)
+        public function setCellphoneId($CellphoneId)
         {
-                $this->Id = $Id;
+                $this->CellphoneId = $CellphoneId;
 
         }
 
@@ -56,8 +56,6 @@ namespace Models;
         public function setModel($Model)
         {
                 $this->Model = $Model;
-
-                return $this;
         }
 
         public function getPrice()

@@ -1,5 +1,5 @@
 <div class="wrapper row1">
-  <header id="header" class="clear"> 
+  <header id="header" class="clear">
     <div id="logo" class="fl_left">
       <h1>Cellphones</h1>
     </div>
@@ -7,8 +7,8 @@
       <ul class="clear">
         <li class="active"><a class="drop" href="#">Actions</a>
           <ul>
-            <li><a href="">ADD</a></li>
-            <li><a href="">LIST/REMOVE</a></li>
+            <li><a href="<?php echo FRONT_ROOT?>Cellphone/ShowAddCellphones">ADD</a></li>
+            <li><a href="<?php echo FRONT_ROOT?>Cellphone/ShowCellphoneList">LIST/REMOVE</a></li>
       </ul>
     </nav>
   </header>

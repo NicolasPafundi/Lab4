@@ -1,7 +1,7 @@
 <?php
     namespace DAO;
     use Models\Cellphone as Cellphone;
-    interface IUserRepository
+    interface ICellphoneDAO
     {
         function Add(Cellphone $newCellphone);
         function GetAll();

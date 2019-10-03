@@ -1,4 +1,4 @@
-<?php namespace Repositories;
+<?php namespace DAO;
 use DAO\ICellphoneDAO as ICellphoneDAO;
 use Models\Cellphone as Cellphone;
 class CellphoneDAO implements ICellphoneDAO{
@@ -43,7 +43,7 @@ class CellphoneDAO implements ICellphoneDAO{
         }
         $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
 
-        file_put_contents('../DAO/Data/Cellphones.json', $jsonContent);
+        file_put_contents('../Data/Cellphones.json', $jsonContent);
     }
     private function RetrieveData()
     {
@@ -55,11 +55,11 @@ class CellphoneDAO implements ICellphoneDAO{
             foreach($arrayToDecode as $valuesArray)
             {
                 $Cellphone = new Cellphone();
-                $Cellphone->setFirstName($valuesArray["firstName"]);
-                $Cellphone->setLastName($valuesArray["lastName"]);
-                $Cellphone->setEmail($valuesArray["email"]);
                 $Cellphone->setCellphoneId($valuesArray["CellphoneId"]);
-                $Cellphone->setPassword($valuesArray["password"]);
+                $Cellphone->setCode($valuesArray["Code"]);
+                $Cellphone->setBrand($valuesArray["Brand"]);
+                $Cellphone->setModel($valuesArray["Model"]);
+                $Cellphone->setPrice($valuesArray["Price"]);
                 array_push($this->CellphoneList, $Cellphone);
             }
         }
